@@ -6,10 +6,19 @@ public class Book {
 	private String genre;
 	private String author;
 	private String publisher;
-	private String price;
+	private int price;
 	
-	public Book(int no, String genre, String author, String publisher, String price) {
+	public Book(int no, String name, String genre, String author, String publisher, int price) {
 		this.no = no;
+		this.name = name;
+		this.genre = genre;
+		this.author = author;
+		this.publisher = publisher;
+		this.price = price;
+	}
+	
+	public Book(String name, String genre, String author, String publisher, int price) {
+		this.name = name;
 		this.genre = genre;
 		this.author = author;
 		this.publisher = publisher;
@@ -57,11 +66,11 @@ public class Book {
 		this.publisher = publisher;
 	}
 
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
 	

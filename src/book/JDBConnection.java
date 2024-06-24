@@ -13,19 +13,20 @@ public class JDBConnection {
 	public ResultSet rs;
 	
 	public JDBConnection() {
-		// DB ¿¬°áÀÇ À§ÇÑ Á¤º¸
+		// DB ì—°ê²°ì„ ìœ„í•œ ì •ë³´
 		final String jdbcDriverClassName = "oracle.jdbc.OracleDriver";
 		final String url = "jdbc:oracle:thin:@localhost:1521:xe";
 		final String userid = "c##java";
 		final String passwd = "1234";
 		
 		try {
-			// JDBC µå¶óÀÌ¹ö loading
+			// JDBC ë“œë¼ì´ë²„ loading
 			Class.forName(jdbcDriverClassName);
 			
-			// Connection °´Ã¼ »ı¼º
+			// Connection ê°ì²´ ìƒì„±
 			conn = DriverManager.getConnection(url, userid, passwd);
-			System.out.println("¿À¶óÅ¬ DB ¿¬°á ¼º°ø");
+			System.out.println("ì˜¤ë¼í´ DB ì—°ê²° ì„±ê³µ");
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 		}
